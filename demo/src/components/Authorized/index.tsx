@@ -2,7 +2,7 @@ import React from 'react';
 import { inject, observer } from 'mobx-react';
 import CheckPermission from './CheckPermission';
 import UserStore from '@/store/userStore';
-import { Spin } from 'turbo-components';
+import { Spin } from 'raturbo-components';
 
 interface AuthorizedProps {
   routeAuthority?: string[] | string | undefined;

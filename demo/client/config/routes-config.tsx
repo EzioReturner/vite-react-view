@@ -1,6 +1,6 @@
-import type { CustomerRouteConfig } from "@lite/react-view";
-export const fileRoutes:CustomerRouteConfig[] = 
-/* lite routes begin */
+import type { CustomerRouteConfig } from '../../../src';
+export const fileRoutes: CustomerRouteConfig[] =
+  /* vite routes begin */
 [
   {
     name: 'contact',
@@ -26,4 +26,4 @@ export const fileRoutes:CustomerRouteConfig[] =
     path: '/todo'
   }
 ]
-/* lite routes end */
+/* vite routes end */

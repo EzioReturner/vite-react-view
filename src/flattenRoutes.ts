@@ -11,7 +11,7 @@ export default function generateFlattenRoutes(
 ) {
   const { viewIndex, ext } = getConstantsMergedOptions(options);
 
-  const { LITE_REACT_VIEW_CONFIG_FILE } = getEnvConstants(root, options);
+  const { VITE_REACT_VIEW_CONFIG_FILE } = getEnvConstants(root, options);
 
   let flattenRoutes = formatResult(scanningResult, viewIndex, ext);
 
@@ -19,9 +19,9 @@ export default function generateFlattenRoutes(
 
   let suppleRoutes = suppleGroupRouteIndex(sortedRoutes, viewIndex);
 
-  const configTpl = readFileSync(resolve(__dirname, './templates/lite-config.art'), 'utf-8');
+  const configTpl = readFileSync(resolve(__dirname, './templates/vite-config.art'), 'utf-8');
 
-  createFlattenRoutesFile(suppleRoutes, LITE_REACT_VIEW_CONFIG_FILE, configTpl);
+  createFlattenRoutesFile(suppleRoutes, VITE_REACT_VIEW_CONFIG_FILE, configTpl);
 
   return suppleRoutes;
 }

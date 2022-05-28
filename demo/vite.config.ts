@@ -2,12 +2,12 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import vitePluginImp from 'vite-plugin-imp';
 import path from 'path';
-import liteReactView from '../src/plugin';
+import viteReactView from '../src/plugin';
 
 export default defineConfig({
   base: process.env.NODE_ENV === 'production' ? '/' : './',
   plugins: [
-    liteReactView({
+    viteReactView({
       entryDir: ['/src', '/client']
     }),
     react({
@@ -35,9 +35,9 @@ export default defineConfig({
           }
         },
         {
-          libName: 'turbo-components',
+          libName: 'raturbo-components',
           style(name) {
-            return `turbo-components/es/${name}/style/index.js`;
+            return `raturbo-components/esm/${name}/style/index.js`;
           }
         }
       ]

@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "egg-scripts start --port=8080 --daemon --title=egg-server-VITE-REACT-PRO",
-    "stop": "egg-scripts stop --title=egg-server-VITE-REACT-PRO",
     "dev-client": "vite",
-    "dev-server": "egg-bin dev --port=8081",
     "build": "tsc && vite build --mode production",
     "new": "plop --plopfile ./scripts/plopfile.ts && prettier --write src/**/*.{tsx,ts,js}",
     "lint-fix": "prettier --write src/**/*.{tsx,ts,js} && eslint src/**/*.{tsx,ts,js} --fix"
@@ -20,7 +17,6 @@
     "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@babel/plugin-proposal-decorators": "^7.14.2",
     "@babel/plugin-proposal-optional-chaining": "^7.14.2",
-    "@lite/react-view": "^0.1.0-beta",
     "antd": "^4.19.1",
     "axios": "^0.21.1",
     "babel-preset-react-app": "^10.0.0",
@@ -37,7 +33,7 @@
     "react-router-dom": "^5.2.0",
     "react-transition-group": "^4.4.2",
     "size-sensor": "^1.0.1",
-    "turbo-components": "^0.7.2",
+    "raturbo-components": "^0.4.0",
     "typescript": "^4.5.4",
     "vite-plugin-imp": "^2.1.6"
   },

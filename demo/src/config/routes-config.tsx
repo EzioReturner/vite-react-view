@@ -24,7 +24,7 @@ export const constantRouteConfig: { app: VrpRouteConfig } = {
 };
 
 export const fileRoutes: VrpRouteConfig[] =
-  /* lite routes begin */
+  /* vite routes begin */
   [
     {
       name: 'psauth-identifypsuser',
@@ -134,4 +134,4 @@ export const fileRoutes: VrpRouteConfig[] =
       ]
     }
   ];
-/* lite routes end */
+/* vite routes end */

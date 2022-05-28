@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
 import LayoutStore from '@/store/layoutStore';
 import { getRouteAuthority } from '@/utils/authorityTools';
-import { Spin, Layout } from 'turbo-components';
+import { Spin, Layout } from 'raturbo-components';
 import SiderMenu from './components/SiderMenu';
 import UserInfo from './components/UserInfo';
 import SiteDetail from './components/SiteDetail';

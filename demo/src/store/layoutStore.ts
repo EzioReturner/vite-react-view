@@ -7,7 +7,7 @@ import { message } from 'antd';
 import { changeTheme } from '@/utils/theme';
 import { useLocationQuery } from '@/utils/customHooks';
 import { fileRoutes as routeConfig, constantRouteConfig } from '@/config/routes-config';
-import useLiteRouter from 'virtual:@lite/react-view';
+import useLiteRouter from 'virtual:vite-react-view';
 import type { VrpRouteConfig } from '@/router';
 
 const { useMenu, useHeader, useTheme, layoutMode, navigateMode, contentAreaWidthMode } = setting;
@@ -174,11 +174,11 @@ class LayoutStore {
   @action initialRouteConfig(): void {
     const { app } = constantRouteConfig;
 
-    const liteRouter = useLiteRouter(routeConfig);
+    const viteRouter = useLiteRouter(routeConfig);
 
-    console.log(liteRouter);
+    console.log(viteRouter);
 
-    app.routes = [app.routes![0], ...liteRouter];
+    app.routes = [app.routes![0], ...viteRouter];
 
     this.routeConfig = [app];
   }

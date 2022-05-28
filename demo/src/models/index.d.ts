@@ -1,7 +1,7 @@
 /// <reference types="node" />
 /// <reference types="react" />
 /// <reference types="react-dom" />
-declare module 'virtual:@lite/react-view' {
+declare module 'virtual:vite-react-view' {
   const result: any;
   export default result;
 }

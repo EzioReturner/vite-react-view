@@ -1,4 +1,4 @@
-import type { CustomerRouteConfig } from '@lite/react-view';
+import type { CustomerRouteConfig } from 'vite-react-view';
 
 {{set routesLen = data.routes.length}}
 {{if routesLen > 0}}

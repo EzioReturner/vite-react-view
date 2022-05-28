@@ -1,4 +1,4 @@
-import router from '@/.lite/react-view/config';
+import router from '@/.vite/react-view/config';
 
 export function getRouteByName(name) {
   return router[name]?.component;

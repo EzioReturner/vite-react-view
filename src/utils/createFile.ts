@@ -10,9 +10,9 @@ import { getEnvConstants } from '../constants';
 export function createFolder(config: ResolvedConfig, options: SimpleEntryOptions) {
   const { root } = config;
 
-  const { LITE_REACT_VIEW_DIR, USER_CONFIG_DIR } = getEnvConstants(root, options);
+  const { VITE_REACT_VIEW_DIR, USER_CONFIG_DIR } = getEnvConstants(root, options);
 
-  mkdirp.sync(LITE_REACT_VIEW_DIR);
+  mkdirp.sync(VITE_REACT_VIEW_DIR);
   mkdirp.sync(USER_CONFIG_DIR);
 }
 

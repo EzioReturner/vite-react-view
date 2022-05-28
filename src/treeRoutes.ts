@@ -19,7 +19,7 @@ export default function generateTreeRoutes(
     compareRouteTree(USER_CONFIG_DIR, USER_CONFIG_FILE, filterRoutes, options);
   } else {
     let baseConfig =
-      'import type { CustomerRouteConfig } from "@lite/react-view";\nexport const fileRoutes:CustomerRouteConfig[] = ' +
+      'import type { CustomerRouteConfig } from "vite-react-view";\nexport const fileRoutes:CustomerRouteConfig[] = ' +
       '\n' +
       START_ANCHOR +
       '\n' +
@@ -57,8 +57,8 @@ async function compareRouteTree(
     .replace(/\n|\s/g, '')
     .replace(/(-?Infinity)/g, '"$1"')
     // 替换jsx标签
-    .replace(/</g, "'$LITE_JSX_LABEL_LEFT")
-    .replace(/(\s?)\/>/g, "$LITE_JSX_LABEL_RIGHT'")
+    .replace(/</g, "'$VITE_JSX_LABEL_LEFT")
+    .replace(/(\s?)\/>/g, "$VITE_JSX_LABEL_RIGHT'")
     // key增加双引号
     .replace(/(\w+):/g, '"$1":')
     // value替换双引号
@@ -107,8 +107,8 @@ async function compareRouteTree(
     // value双引号转单引号
     .replace(/"/g, "'")
     .replace(/'(-?Infinity)'/g, '$1')
-    .replace(/'\$LITE_JSX_LABEL_LEFT/g, '<')
-    .replace(/\$LITE_JSX_LABEL_RIGHT'/g, ' />');
+    .replace(/'\$VITE_JSX_LABEL_LEFT/g, '<')
+    .replace(/\$VITE_JSX_LABEL_RIGHT'/g, ' />');
 
   let routeTreeConfig =
     userImports +

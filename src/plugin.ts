@@ -22,7 +22,7 @@ export default function viteReactView(viewOptions?: ViteReactViewOptions): Plugi
   };
 
   return {
-    name: 'lite:react-view',
+    name: 'vite:react-view',
     enforce: 'pre',
     resolveId(id) {
       if (id === VIRTUAL_MODULE_ID) {

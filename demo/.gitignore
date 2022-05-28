@@ -15,5 +15,5 @@ typings/
 app/public/assets/
 app/public/index.html
 
-.lite/
-src/.lite
+.vite/
+src/.vite

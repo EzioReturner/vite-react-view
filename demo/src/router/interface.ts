@@ -1,5 +1,5 @@
 import type { RouteComponentProps } from 'react-router-dom';
-import type { CustomerRouteConfig } from '@lite/react-view';
+import type { CustomerRouteConfig } from '../../../src';
 
 /**
  * 路由生成组件
