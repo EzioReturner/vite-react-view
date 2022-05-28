@@ -1,0 +1,30 @@
+.tc-header {
+  border-bottom: 1px solid #00152914;
+  box-shadow: none;
+}
+
+.RA-basicLayout-main-horizontal {
+  .tc-header {
+    border-bottom: 0;
+    box-shadow: 4px 4px 40px 0 rgb(0 0 0 / 5%);
+  }
+}
+
+.RA-basicLayout-header-container {
+  display: flex;
+  align-items: center;
+
+  & > .horizontal-header-site-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.RA-basicLayout-wrapper-viewMain {
+  padding: var(--vrp-layout-padding);
+
+  &.in-horizontal-layout {
+    padding: 0;
+  }
+}

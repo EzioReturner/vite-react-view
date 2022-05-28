@@ -1,0 +1,108 @@
+.RA-navigator {
+  min-height: 100%;
+  background-color: var(--vrp-component-background);
+  box-shadow: 0px 0px 28px var(--vrp-primary-lightener-extra);
+  z-index: 3;
+  transition: all 0.3s;
+  display: flex;
+  flex-flow: column;
+  flex: 0 0 var(--vrp-layout-menu-width);
+  max-width: var(--vrp-layout-menu-width);
+  min-width: var(--vrp-layout-menu-width);
+  width: var(--vrp-layout-menu-width);
+  position: relative;
+  overflow: hidden;
+
+  &.RA-navigator-fixSiderBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+
+  &.RA-navigator-collapsed {
+    flex: 0 0 var(--vrp-layout-menu-collapsed-width);
+    max-width: var(--vrp-layout-menu-collapsed-width);
+    min-width: var(--vrp-layout-menu-collapsed-width);
+    width: var(--vrp-layout-menu-collapsed-width);
+  }
+
+  &.RA-inlineLayout-navigator {
+    &.RA-navigator-fixSiderBar {
+      top: var(--vrp-layout-header-height);
+      height: calc(100vh - 88px);
+      min-height: unset;
+    }
+  }
+
+  &.RA-splitLayout-navigator {
+    z-index: 8;
+  }
+}
+
+.RA-menu.ant-menu {
+  margin-top: var(--vrp-spacing-middle);
+  flex: 1;
+  overflow: auto;
+  overflow-x: hidden;
+  border: 0 !important;
+
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .RA-menuIcon {
+    margin-right: var(--vrp-spacing-normal) !important;
+    display: inline-block;
+
+    & > span {
+      margin: 0 !important;
+    }
+  }
+
+  &.RA-menu-horizontal {
+    margin-top: 0;
+    line-height: var(--vrp-layout-header-height);
+    height: var(--vrp-layout-header-height);
+
+    .RA-antd-subMenu-title,
+    .RA-antd-menuItem-title {
+      border: 0 !important;
+      height: 100%;
+      line-height: var(--vrp-layout-header-height);
+      top: 0px !important;
+    }
+
+    .RA-antd-menuItem-title {
+      padding: 0 20px;
+    }
+
+    .RA-antd-subMenu-title {
+      & > div {
+        height: var(--vrp-layout-header-height);
+      }
+    }
+  }
+
+  &.RA-menu-collapsed {
+    .RA-antd-subMenu-title,
+    .RA-antd-menuItem-title {
+      display: inline-block;
+      max-width: 0;
+      opacity: 0;
+    }
+
+    .RA-menuIcon {
+      display: block;
+      min-width: 14px;
+    }
+  }
+
+  // 修复antd，submenu与menuItem动画不一致
+  .RA-antd-subMenu,
+  .RA-antd-menuItem {
+    transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
+      border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
+      background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+}

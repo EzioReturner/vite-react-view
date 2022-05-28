@@ -1,0 +1,28 @@
+import router from '@/.lite/react-view/config';
+
+export function getRouteByName(name) {
+  return router[name]?.component;
+}
+
+function generateComponentRouter(route) {
+  const { routes, name } = route;
+
+  return Object.assign(
+    route,
+    routes
+      ? {
+          routes: routes.map(c => generateComponentRouter(c))
+        }
+      : {
+          component: getRouteByName(name)
+        }
+  );
+}
+
+export default function (routes = []) {
+  return routes.reduce((cof, item) => {
+    cof.push(generateComponentRouter(item));
+
+    return cof;
+  }, []);
+}

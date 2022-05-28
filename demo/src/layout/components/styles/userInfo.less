@@ -1,0 +1,47 @@
+.RA-userInfo {
+  color: var(--vrp-text-color);
+  display: flex;
+  font-size: 14px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+
+  & > span {
+    font-weight: bold;
+  }
+
+  .RA-userInfo-icon {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+
+  .RA-userInfo-dropdown {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 8px;
+    transition: all 0.3s;
+    line-height: var(--vrp-layout-header-height);
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.025);
+      color: var(--vrp-primary);
+    }
+  }
+
+  .RA-userInfo-userName {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    @media screen and (max-width: 600px) {
+      width: 50px;
+    }
+  }
+}
+
+.RA-userInfo-menuItem {
+  line-height: initial;
+  margin-left: 12px;
+}

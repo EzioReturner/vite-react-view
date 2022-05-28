@@ -1,0 +1,23 @@
+import type { CustomerRouteConfig } from '@lite/react-view';
+
+{{set routesLen = data.routes.length}}
+{{if routesLen > 0}}
+export type RouterName = {{each data.routes}}'{{$value.name}}'{{if $index != routesLen - 1}}|{{/if}}{{/each}};
+{{/if}}
+{{if routesLen == 0}}
+export type RouterName = any;
+{{/if}}
+export type Router = { [key in RouterName]: RouterItem };
+
+interface RouterItem extends Omit<CustomerRouteConfig, 'name'>{
+}
+
+const router: Router = {
+  {{each data.routes}}'{{$value.name}}': {
+    path: '{{$value.path}}',
+    component: () => import('@/views/{{$value.component}}'),
+  },
+  {{/each}}
+}
+
+export default router;

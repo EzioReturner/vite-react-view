@@ -1,0 +1,73 @@
+@import './nprogress.less';
+@import './customClass.less';
+@import './variables.less';
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+:root {
+  --app-height: 100%;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  *::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    z-index: 10;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: fade(#535353, 40%);
+  }
+
+  *::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    background: lighten(#ededed, 10%);
+    border-radius: 15px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei',
+    'Source Han Sans SC', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', sans-serif;
+
+  // &.darkTheme {
+  //   --vrp-text-color: rgba(255, 255, 255, 0.65);
+  //   --vrp-text-color-secondary: rgba(255, 255, 255, 0.45);
+  //   --vrp-heading-color: rgba(255, 255, 255, 0.85);
+  //   --vrp-body-background: #0c0c0c;
+  //   --vrp-navigator-background: #222222;
+  //   --vrp-popover-background: #2a2a2a;
+  //   --vrp-component-background: #1d1d1d;
+  //   --vrp-border-color: #434343;
+  //   --vrp-shadow-color: rgba(0, 0, 0, 0.45);
+  // }
+}
+
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  background: unset;
+  outline: none;
+}

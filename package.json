@@ -1,0 +1,50 @@
+{
+  "name": "vite-react-view",
+  "version": "1.0.0",
+  "description": "React's automatic generate your routes info by files path",
+  "author": "ezioreturner@gmail.com",
+  "license": "MIT",
+  "repository": "vite-react-view",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "typings": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf dist && tsup src/index.ts --dts --format cjs,esm && node scripts/copy.js",
+    "prepublishOnly": "yarn build"
+  },
+  "peerDependencies": {
+    "vite": "^2.9.1"
+  },
+  "devDependencies": {
+    "@alloc/fast-rimraf": "^1.0.8",
+    "@types/mkdirp": "^1.0.2",
+    "@types/node": "^14.14.20",
+    "@types/resolve": "^1.20.0",
+    "fs-extra": "^10.0.1",
+    "prettier": "^2.0.5",
+    "tsup": "^5.12.4",
+    "typescript": "^4.0.0",
+    "vite": "^2.9.1"
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "react",
+    "react17",
+    "router",
+    "react-router"
+  ],
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "fast-glob": "^3.2.11",
+    "mkdirp": "^1.0.4",
+    "resolve": "^1.20.0"
+  }
+}
